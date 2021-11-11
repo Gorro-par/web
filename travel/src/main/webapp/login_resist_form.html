@@ -1,0 +1,73 @@
+<html lang="en">
+    <head>
+    	<meta charset="utf-8">
+        <title>로그인 / 회원가입 폼 템플릿</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="form-wrap">
+                <div class="button-wrap">
+                    <div id="btn"></div>
+                    <button type="button" class="togglebtn" onclick="login()">로그인</button>
+                    <button type="button" class="togglebtn" onclick="register()">회원가입</button>
+                </div>
+                <div class="social-icons">
+                    <img src="img/fb.png" alt="facebook">
+                    <img src="img/tw.png" alt="twitter">
+                    <img src="img/gl.png" alt="google">
+                </div>
+                <form id="login" action="../travel/Login" class="input-group" method="post">
+                    <input type="text" class="input-field" placeholder="User ID" required name="id">
+                    <input type="password" class="input-field" placeholder="Enter Password" required name="pw">
+                    <input type="checkbox" class="checkbox"><span>Remember Password</span>
+                    <button class="submit">Login</button>
+                </form>
+                <form id="register" action="../travel/Login" class="input-group">
+                      <input type="text" class="input-field4" placeholder="ID" required>
+                      <input type="button" class="submit2" value="중복확인" onclick=''/>    
+                    <input type="password" class="input-field" placeholder="PASSWORD" required>
+                    <input type="password" class="input-field" placeholder="PASSWORD 확인" required>
+                    <input type="text" class="name-input-field2" placeholder="NAME" required>
+                    <input type="checkbox" class="check-field" name='SEX' value='male' onclick='checkOnlyOne(this)'/><spam>MALE</spam>
+                    <input type="checkbox" class="check-field" name='SEX' value='female' onclick='checkOnlyOne(this)'/><spam>FEMALE</spam>
+                    <script>
+                    function checkOnlyOne(element) {
+                    const checkboxes = document.getElementsByName("SEX");
+                    checkboxes.forEach((cb) => {
+                    cb.checked = false;
+                      })
+  
+                      element.checked = true;
+                    }
+                    </script>
+                    <input type="text" class="input-field2" placeholder="YOUR ADDRESS" required>
+                    <input type="button" class="submit2" value="우편번호" onclick=''/>
+                    <input type="text" class="input-field" placeholder="YOUR YEARS" required>
+                    <input type="email" class="input-field" placeholder="E-MAIL" required>
+                    <input type="text" class="input-field3" placeholder="인증번호를 입력해주세요." required>
+                    <input type="button" class="submit2" value="안증번호 전송" onclick=''/>
+                    <button class="submit-join">JOIN US</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+            
+            
+            function login(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0";
+            }
+
+            function register(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+        </script>
+    </body>
+</html>

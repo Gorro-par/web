@@ -18,7 +18,7 @@ public class DBAction {
 //		try {
 //			Class.forName(driver);
 //			conn = DriverManager.getConnection(url, "root", "java");
-//		}catch(Exception e) {e.printStackTrace();}
+//	}catch(Exception e) {e.printStackTrace();}
 		try {
 			InitialContext initctx = new InitialContext();
 			Context ctx = (Context)initctx.lookup("java:/comp/env");
