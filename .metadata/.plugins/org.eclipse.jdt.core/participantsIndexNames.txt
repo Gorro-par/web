@@ -29,6 +29,8 @@ C:\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3541776386.index
 \shop\src\main\java
 C:\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2498125471.index
 \timemarket_front2\src
+C:\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\714678719.index
+\travel\src\main\java
 C:\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4126032430.index
 \webapp\src\main\java
 C:\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2094002893.index

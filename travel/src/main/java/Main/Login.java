@@ -3,13 +3,15 @@ package Main;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Dao.UserinfoDao;
+import Dao.MemberDao;
+import Dto.Userinfo;
 
 /**
  * Servlet implementation class Login
@@ -43,15 +45,28 @@ public class Login extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
+		/*
 		UserinfoDao userinfodao =  new UserinfoDao();
 		boolean result = userinfodao.exist(id, pw);
 		if(result==true) {
-			out.print("성공");
+			out.print("<script>");
+			  out.print("alert('로그인에 성공하셧습니다.');");
+			  out.print("location.href = 'http://localhost:8080/travel/main.html'");
+			  out.print("</script>");
 		}
 		else {
-			out.print("실패");
+			out.print("<script>");
+			  out.print("alert('틀렸습니다 다시 로그인을 시도해주세요.');");
+			  out.print("location.href = 'http://localhost:8080/travel/login_resist_form.html'");
+			  out.print("</script>");
 		}
-		
+		*/
+		MemberDao memberdao = new MemberDao();
+		Userinfo userinfo = memberdao.getUserinfo(id, pw);  // 로그인 사용 가능
+		request.getSession().setAttribute("userinfo", userinfo);		
+		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+		rd.forward(request, response);
+		         
 	}
 
 }

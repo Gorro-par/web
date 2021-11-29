@@ -3,6 +3,84 @@
     padding: 0;
     font-family: sans-serif;
 }
+.head {
+    height: 56px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    color: #000;
+    margin-left: 9px;
+    font-weight: bold;
+    font-size: 40px;
+}
+.search {
+    margin-top: 7px;  
+    
+}
+.search > input {
+    width: 350px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 2px 0 rgba(200, 200, 200, 0.5);
+}
+.search > button {
+    background: #fff;
+    border: 1px solid #fff;
+    position: absolute;
+    width: 40px;
+    height: 42px; 
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 0 rgba(200, 200, 200, 0.5);
+}
+.search > button > img {
+    margin-top: 2px;
+    width: 25px;
+    height: 25px; 
+}
+.info-form{
+	margin: 18px 9px 9px 0;
+}
+.login {
+    color: #000;
+    font-size: 20px;
+    margin: 9px 9px 9px 0;
+    padding: 3px 13px 0 13px;
+    border: 2px solid #fff;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+.login:hover {
+    color: #EEE;
+    background: #fff;
+    transition: all 0.3s;
+    /* transition: all 0.5s; 泥쒖쿇�엳 �굹�삤寃� */
+    /* transition-delay: 1s; n珥� �뮘�뿉 諛섏쓳 */
+}
+.member-info {
+    color: #000;
+    font-size: 20px;
+    margin: 9px 9px 9px 0;
+    padding: 3px 13px 0 13px;
+    border: 2px solid #fff;
+    width: 150px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+.memberinfo:hover {
+    color: #EEE;
+    background: #fff;
+    transition: all 0.3s;
+    /* transition: all 0.5s; 泥쒖쿇�엳 �굹�삤寃� */
+    /* transition-delay: 1s; n珥� �뮘�뿉 諛섏쓳 */
+}
 .wrap {
     height: 100%;
     width: 100%;
@@ -33,7 +111,7 @@
     width: 600px;
     height: 200px;
     position: static;
-    margin: 2% auto;
+    margin: 6% auto;
     background: #c0c0c0;
     padding: 5px;
     overflow: hidden;
@@ -41,14 +119,15 @@
 }
 .next-form {
     width: 600px;
-    height: 100px;
-    position: static;
+    height: 330px;
+    position: relative;
     margin: 2% auto;
     background: #fff;
     padding: 5px;
     overflow: hidden;
 }
 .skip {
+	bottom: -140px;
     width: 85%;
     padding: 10px 30px;
     cursor: pointer;
@@ -57,9 +136,10 @@
     border: 0;
     outline: none;
     border-radius: 30px;
+    position: relative;
 }
 .next {
-	right:0;
+	bottom: -140px;
     width: 85%;
     padding: 10px 30px;
     cursor: pointer;
@@ -68,6 +148,8 @@
     border: 0;
     outline: none;
     border-radius: 30px;
+    position: relative;
+    right:-365px;
 }
 .button-wrap {
     width: 230px;
@@ -226,6 +308,16 @@
     background: linear-gradient(to right, #ff105f, #ffad06);
     border: 0;
     outline: none;
+    border-radius: 30px;
+}
+.gotomain {
+    width: 80px;
+    height: 20px;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin: 200px 70px 80px 70px;
+    position: absolute;
+    background: #777;
     border-radius: 30px;
 }
 .submit-join {

@@ -6,6 +6,9 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\jun03\Desktop\메인"/>
+			<item value="C:\web\travel"/>
+			<item value="C:\Users\jun03\Desktop\travel"/>
 			<item value="C:\web\SnackMall"/>
 			<item value="C:\web\timemarket_front2 (2)"/>
 			<item value="C:\Users\jun03\Desktop\timemarket_front2 (2)"/>

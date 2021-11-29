@@ -12,7 +12,7 @@ public class DBAction {
 	
 	public DBAction() {
 		String driver = "com.mysql.cj.jdbc.Driver";
-		String url = "jdbc:mysql://localhost:3306/travel?characterEncoding=UTF-8&serverTimezone=UTC";
+		String url = "jdbc:mysql://localhost:3306/travel?";
 		try {
 			Class.forName(driver);
 			conn = DriverManager.getConnection(url,"root","java");
