@@ -1,7 +1,10 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
+    /* list-style: none; */
+	text-decoration: none;
     font-family: sans-serif;
+    /* overflow: hidden; */
 }
 .head {
     height: 56px;
@@ -91,7 +94,7 @@
 }
 .form-wrap {
     width: 380px;
-    height: 680px;
+    height: 380px;
     position: relative;
     margin: 3% auto;
     background: #fff;
@@ -100,7 +103,7 @@
 }
 .form {
     width: 700px;
-    height: 600px;
+    height: 400px;
     position: static;
     margin: 2% auto;
     background: #fff;
@@ -126,31 +129,33 @@
     padding: 5px;
     overflow: hidden;
 }
-.skip {
-	bottom: -140px;
-    width: 85%;
-    padding: 10px 30px;
+
+
+
+.aa {
+    margin-top: 95px;
+    display: flex;
+    justify-content: space-around;
+}
+#button{
+    font-weight: bold;
     cursor: pointer;
-    margin: auto;
-    background: #929292;
     border: 0;
     outline: none;
     border-radius: 30px;
-    position: relative;
+    width: 120px;
+    padding: 10px 30px;
+}
+.skip {
+    background: #929292;
 }
 .next {
-	bottom: -140px;
-    width: 85%;
-    padding: 10px 30px;
-    cursor: pointer;
-    margin: auto;
     background: linear-gradient(to right, #ff105f, #ffad06);
-    border: 0;
-    outline: none;
-    border-radius: 30px;
-    position: relative;
-    right:-365px;
 }
+
+
+
+
 .button-wrap {
     width: 230px;
     margin: 20px auto;
@@ -300,6 +305,7 @@
     margin: 15px 0px 0 0 ;
 }
 .submit {
+    font-weight: bold;
     width: 85%;
     padding: 10px 30px;
     cursor: pointer;

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카테고리 선택</title>
-    <link rel="stylesheet" href="style-cate.css">
+    <link rel="stylesheet" href="style-cate.css?12312">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
     <script>
 					$(document).ready(function() {
@@ -24,33 +24,40 @@
 							
 						});
 					});
+					function go(param){
+						
+						if(param == 'skip'){
+							document.f.action='./강원도/강원도.html';	
+						}else{
+							document.f.action='../travel/Category';	
+						}
+						document.f.submit();
+						
+						
+					}
 					</script>
 </head>
     <body>
 		<div class="head">
     		<a href="#head" class="logo">logo</a>
-	        	<div class="search">
-	            	<input type="input_text">
-	            	<button><img src="./img/searchr.png" alt="searchr.png"></button>
-	        	</div>
-	        	<div class="info-form">
-	        	<%
-        		Userinfo userinfo = (Userinfo)request.getSession().getAttribute("userinfo");	
-        		%>
-        		<%= userinfo.getName() %>님 로그인중 
-	        	<a href="#!" class="member-info">회원정보 수정</a>
-	        	<a href="#!" class="login" onclick = "location.href='main.html'" >로그아웃</a>
+	        	 <div class="info-form">
+	        <a href="#!" class="member-info">
+	        <%
+                Userinfo userinfo = (Userinfo)request.getSession().getAttribute("userinfo");
+            %>
+            <%= userinfo.getName() %>님 로그인중 </a>	
+	        <a href="#!" class="login" onclick = "location.href='main.html'" >로그아웃</a>
 	        </div>
 	    </div>
         <div class="wrap">
             <div class="form">
+            <form action=""  method = "post" name=f>
                 <div class="button-wrap2">
                     <div id="btn"></div>
                     <button type="button" class="catebtn" onclick="login()">CATEGORY</button>
                 </div>
-                <form action="../travel/Category" method = "post" >
                 <div>
-	                 <label><input type="checkbox" class="cate-check2" name='CATE' vaule=1 onclick='checkOnlyThree(this)'/><spam3>활동적인</spam3></label>
+	                 <label><input type="checkbox" class="cate-check2" name='CATE'value=1 onclick='checkOnlyThree(this)'/><spam3>활동적인</spam3></label>
 					 <label><input type="checkbox" class="cate-check" name='CATE' value=2 onclick='checkOnlyThree(this)'/><spam3>휴양지</spam3></label>
 					 <label><input type="checkbox" class="cate-check" name='CATE' value=3 onclick='checkOnlyThree(this)'/><spam3>여유롭게</spam3></label>
 					 <label><input type="checkbox" class="cate-check" name='CATE' value=4 onclick='checkOnlyThree(this)'/><spam3>산</spam3></label>
@@ -80,19 +87,16 @@
 				<div>
 	                 <label><input type="checkbox" class="cate-check2" name='CATE' value=21 onclick='checkOnlyThree(this)'/><spam3>전연령</spam3>
 				</div>
-				<input type = "submit" class="next">Next</button>
-				</form>
-				<div class="next-form">
-					<div class="jang-form">
-					
-					</div>
-				<form action="" class="input-group2">
-                    <button class="skip">Skip</button>
-                </form>
-                <form action="" class="input-group2">
-                    
-                </form>
+				<div class="aa">
+			<!-- 	<div class="next-form"> -->
+				<!-- <form action="./sebu.jsp" class="input-group2"  > -->
+                    <button class="skip" id="button" onclick="go('skip')">Skip</button>
+                <!-- </form> -->
+                
+                	<button class="next" id="button" onclick="go('next')">Next</button>
+				<!-- </div> -->
 				</div>
+                </form>
             </div>
         </div>
     </body>

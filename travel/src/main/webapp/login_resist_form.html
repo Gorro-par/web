@@ -1,8 +1,8 @@
 <html lang="en">
     <head>
     	<meta charset="utf-8">
-        <title>로그인 / 회원가입 폼 템플릿</title>
-        <link rel="stylesheet" href="style.css?v=14">
+        <title>Login</title>
+        <link rel="stylesheet" href="Login_style.css?1312">
 			<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 			<script>
    			 function sample6_execDaumPostcode() {
@@ -46,17 +46,13 @@
     </head>
     <body>
         <div class="wrap">
-            <div class="form-wrap">
+            <div class="form-wrap">	
                 <div class="button-wrap">
                     <div id="btn"></div>
                     <button type="button" class="togglebtn" onclick="login()">로그인</button>
                     <button type="button" class="togglebtn" onclick="register()">회원가입</button>
                 </div>
-                <div class="social-icons">
-                    <img src="img/fb.png" alt="facebook">
-                    <img src="img/tw.png" alt="twitter">
-                    <img src="img/gl.png" alt="google">
-                </div>
+              
                 <form id="login" action="../travel/Login" class="input-group" method="post">
                     <input type="text" class="input-field" placeholder="User ID" required name="id">
                     <input type="password" class="input-field" placeholder="Enter Password" required name="pw">
@@ -64,10 +60,8 @@
                     <button class="submit">Login</button>
                 </form>
                 <form id="register" action="../travel/MemberAdd" method = "post" class="input-group">
-                    <input type="text" class="input-field4" placeholder="ID" required name="id">
-                    <input type="button" class="submit2" value="중복확인" onclick=''/>    
+                    <input type="text" class="input-field4" placeholder="ID" required name="id">    
                  	<input type="password" class="input-field" placeholder="PASSWORD" required name="pw">
-                    <input type="password" class="input-field" placeholder="PASSWORD 확인" required >
                     <input type="text" class="name-input-field2" placeholder="NAME" required name="name">
                     <input type="radio" class="check-field" name="sex" value="man" checked="checked" /> <spam>man</spam>
 					<input type="radio" class="check-field" name="sex" value="woman"/> <spam>woman</spam>
@@ -76,9 +70,7 @@
 					<input type="text" class="input-field" id="sample6_address" placeholder="주소" name = "post"><br>
 	                <input type="text" class="input-field3" id="sample6_detailAddress" placeholder="상세주소" name = "address">
                     <input type="text" class="input-field" placeholder="YOUR YEARS" required name="age">
-                    <input type="email" class="input-field" placeholder="E-MAIL" required name=email>
-                    <input type="text" class="input-field3" placeholder="인증번호를 입력해주세요." required>
-                    <input type="button" class="submit2" value="인증번호 전송" onclick=''/>
+                    <input type="text" class="input-field" placeholder="YOUR EMAIL" required name="email">
                     <button class="submit-join" >JOIN US</button>
                 </form>
             </div>
